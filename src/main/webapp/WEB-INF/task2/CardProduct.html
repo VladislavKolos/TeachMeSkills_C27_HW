@@ -7,12 +7,6 @@
     <link href="style.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
-    <script crossorigin="anonymous"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-
-    </style>
 </head>
 <body>
 <div class="container mx-auto mt-4">
@@ -26,6 +20,7 @@
         </div>
         <div class="col-3">
         </div>
+
         <div class="col-4">
             <div class="card">
                 <div class="carousel slide" id="carouselExampleIndicators">
@@ -63,7 +58,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone 15 Pro Max 256GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel" class="modal fade" id="infoModal" role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel">Additional Product Information
+                                    </h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.7" OLED screen (1290x2796) 120 Hz, Apple A17 Pro, 8 GB RAM, 256 GB
+                                    memory, 48 MP camera, 4422 mAh battery, 1 SIM (nano-SIM/eSIM), IP68 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst" type="radio" value="0"/>
@@ -141,7 +159,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone 14 Pro Max 256GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal1" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel1" class="modal fade" id="infoModal1"
+                         role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel1">Additional Product Information</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.7" OLED screen (1290x2796) 120 Hz, Apple A16 Bionic, 6 GB RAM, 256 GB
+                                    memory, 48 MP camera, 4323 mAh battery, 1 SIM (nano-SIM/eSIM), IP68 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst1" type="radio" value="0"/>
@@ -220,7 +261,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone 13 Pro Max 256GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal2" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel2" class="modal fade" id="infoModal2"
+                         role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel2">Additional Product Information</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.7" OLED screen (1284x2778) 120 Hz, Apple A15 Bionic, 6 GB RAM, 256 GB
+                                    memory, 12 MP camera, 4352 mAh battery, 1 SIM (nano-SIM/eSIM), IP68 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">CLose
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst2" type="radio" value="0"/>
@@ -299,7 +363,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone 12 Pro Max 256GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal3" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel3" class="modal fade" id="infoModal3"
+                         role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel3">Additional Product Information</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.7" OLED screen (1284x2778) 60 Hz, Apple A14 Bionic, 6 GB RAM, 256 GB
+                                    memory, 12 MP camera, 3687 mAh battery, 1 SIM (nano-SIM/eSIM), IP68 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst3" type="radio" value="0"/>
@@ -327,7 +414,6 @@
                                 </svg>
                             </label>
                             <input id="fst-19" name="fst3" type="radio" value="4"/>
-
                             <label for="fst-20">
                                 <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
@@ -378,7 +464,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone 11 Pro Max 256GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal4" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel4" class="modal fade" id="infoModal4"
+                         role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel4">Additional Product Information</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.5" OLED screen (1242x2688), Apple A13 Bionic, 4 GB RAM, 256 GB memory,
+                                    12 MP camera, 3969 mAh battery, 1 SIM (nano-SIM/eSIM), IP68 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst4" type="radio" value="0"/>
@@ -457,7 +566,30 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Apple iPhone XR 128GB.</p>
-                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-info" data-target="#infoModal5" data-toggle="modal" type="button">Info
+                    </button>
+                    <div aria-hidden="true" aria-labelledby="infoModalLabel5" class="modal fade" id="infoModal5"
+                         role="dialog"
+                         tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel5">Additional Product Information</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Apple iOS, 6.1" IPS screen (828x1792), Apple A12 Bionic, 3 GB RAM, 128 GB memory, 12
+                                    MP camera, 2942 mAh battery, 1 SIM (nano-SIM/eSIM), IP67 waterproof
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="full-stars">
                         <div class="rating-group">
                             <input checked name="fst5" type="radio" value="0"/>
@@ -485,7 +617,6 @@
                                 </svg>
                             </label>
                             <input id="fst-29" name="fst5" type="radio" value="4"/>
-
                             <label for="fst-30">
                                 <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
@@ -499,5 +630,13 @@
         </div>
     </div>
 </div>
+
+<script crossorigin="anonymous"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
