@@ -15,6 +15,20 @@
     object-fit: cover;
 }
 
+.button_link {
+    display: block;
+    background: #337AB7;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    font: 1.2em/12px Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px darkgray;
+}
+
 .full-stars {
     text-align: left;
 }
