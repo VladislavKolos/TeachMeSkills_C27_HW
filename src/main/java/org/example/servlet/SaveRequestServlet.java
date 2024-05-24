@@ -18,8 +18,8 @@ public class SaveRequestServlet extends HttpServlet {
     /**
      * A method that processes a GET-request to open a page containing a form for entering an application.
      */
-    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/save-request.jsp").forward(req, res);
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        req.getRequestDispatcher("/WEB-INF/save-request.jsp").forward(req, res);
     }
 
     /**
@@ -34,7 +34,7 @@ public class SaveRequestServlet extends HttpServlet {
         String messageText = req.getParameter("messageText");
 
         if (email == null || email.isEmpty() || nickName == null || nickName.isEmpty() || messageText == null || messageText.isEmpty()) {
-            resp.sendRedirect(req.getHeader("referer"));
+            resp.sendRedirect(req.getContextPath() + "/save-request");
         }
 
         req.setAttribute("email", email);
