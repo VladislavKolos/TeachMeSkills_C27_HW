@@ -1,0 +1,19 @@
+create database "TMS";
+
+create table "person" (
+	id integer UNIQUE,
+	name VARCHAR(33),
+	surname VARCHAR(33),
+	age integer,
+	passport_number VARCHAR(9) UNIQUE
+);
+
+insert into "person"(id, name, surname, age, passport_number) values (1, 'Vladislav1', 'Kolos', 24, 'DP0010456');
+insert into "person"(id, name, surname, age, passport_number) values (2, 'Vladislav2', 'Kolos', 24, 'DP0010457');
+insert into "person"(id, name, surname, age, passport_number) values (3, 'User', 'Kolos', 55, 'DP0010458');
+insert into "person"(id, name, surname, age, passport_number) values (4, 'User', 'Kolos', 24, 'DP0010459');
+insert into "person"(id, name, surname, age, passport_number) values (5, 'Vladislav3', 'Kolos', 58, 'DP0010450');
+
+update "person" set age=55 where name='User';
+
+delete from "person" where age > 50;
