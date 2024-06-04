@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.lesson35.crud.UpdateUser;
-import org.example.lesson35.model.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -46,14 +45,8 @@ public class ChangeLoginServlet extends HttpServlet {
             if (idAsLine != null) {
                 int id = Integer.parseInt(idAsLine);
 
-                User user = new User();
-                user.setId(id);
-                user.setEmail(email);
-                user.setLogin(newLogin);
-
                 updateUser.updateUser(id, email, newLogin);
-                req.setAttribute("user", user);
-                req.getRequestDispatcher("/WEB-INF/user_info.jsp").forward(req, resp);
+                resp.sendRedirect(req.getContextPath() + "/get?id=" + id + "&login=" + newLogin);
             }
 
         } catch (SQLException e) {

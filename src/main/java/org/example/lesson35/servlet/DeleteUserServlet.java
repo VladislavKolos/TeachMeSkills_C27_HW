@@ -44,7 +44,7 @@ public class DeleteUserServlet extends HttpServlet {
                 int id = Integer.parseInt(idAsLine);
 
                 deleteUser.deleteUser(id);
-                req.getRequestDispatcher("/WEB-INF/delete_user.jsp").forward(req, resp);
+                resp.sendRedirect(req.getContextPath() + "/delete");
             }
 
         } catch (SQLException e) {

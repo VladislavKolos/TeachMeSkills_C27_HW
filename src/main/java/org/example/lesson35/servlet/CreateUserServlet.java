@@ -52,8 +52,7 @@ public class CreateUserServlet extends HttpServlet {
                 user.setLogin(login);
 
                 createUser.createUser(user);
-                req.setAttribute("user", user);
-                req.getRequestDispatcher("/WEB-INF/user_info.jsp").forward(req, resp);
+                resp.sendRedirect(req.getContextPath() + "/get?id=" + user.getId());
             }
 
         } catch (SQLException e) {
