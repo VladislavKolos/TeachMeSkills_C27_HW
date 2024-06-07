@@ -5,8 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.lesson35.crud.CreateUser;
 import org.example.lesson35.model.User;
+import org.example.lesson35.service.UserService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,7 +17,11 @@ import java.sql.SQLException;
  */
 @WebServlet("/create")
 public class CreateUserServlet extends HttpServlet {
-    private final CreateUser createUser = new CreateUser();
+    private final UserService userService;
+
+    public CreateUserServlet() {
+        userService = new UserService();
+    }
 
     /**
      * Processes GET-requests
@@ -38,7 +42,9 @@ public class CreateUserServlet extends HttpServlet {
         String email = req.getParameter("email");
         String login = req.getParameter("login");
 
-        if (idAsLine == null || idAsLine.isEmpty() || email == null || email.isEmpty() || login == null || login.isEmpty()) {
+        if (idAsLine == null || idAsLine.isEmpty()
+                || email == null || email.isEmpty()
+                || login == null || login.isEmpty()) {
             resp.sendRedirect(req.getContextPath() + "/create");
         }
 
@@ -46,12 +52,13 @@ public class CreateUserServlet extends HttpServlet {
             if (idAsLine != null) {
                 int id = Integer.parseInt(idAsLine);
 
-                User user = new User();
-                user.setId(id);
-                user.setEmail(email);
-                user.setLogin(login);
+                User user = User.builder()
+                        .id(id)
+                        .email(email)
+                        .login(login)
+                        .build();
 
-                createUser.createUser(user);
+                userService.createUser(user);
                 resp.sendRedirect(req.getContextPath() + "/get?id=" + user.getId());
             }
 

@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.lesson35.crud.DeleteUser;
+import org.example.lesson35.service.UserService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -16,7 +16,11 @@ import java.sql.SQLException;
  */
 @WebServlet("/delete")
 public class DeleteUserServlet extends HttpServlet {
-    private final DeleteUser deleteUser = new DeleteUser();
+    private final UserService userService;
+
+    public DeleteUserServlet() {
+        userService = new UserService();
+    }
 
     /**
      * Processes GET-requests
@@ -43,7 +47,7 @@ public class DeleteUserServlet extends HttpServlet {
             if (idAsLine != null) {
                 int id = Integer.parseInt(idAsLine);
 
-                deleteUser.deleteUser(id);
+                userService.deleteUser(id);
                 resp.sendRedirect(req.getContextPath() + "/delete");
             }
 

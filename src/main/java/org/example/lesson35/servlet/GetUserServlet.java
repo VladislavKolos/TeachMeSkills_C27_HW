@@ -5,8 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.lesson35.crud.ReadUser;
 import org.example.lesson35.model.User;
+import org.example.lesson35.service.UserService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,7 +17,11 @@ import java.sql.SQLException;
  */
 @WebServlet("/get")
 public class GetUserServlet extends HttpServlet {
-    private final ReadUser readUser = new ReadUser();
+    private final UserService userService;
+
+    public GetUserServlet() {
+        userService = new UserService();
+    }
 
     /**
      * Processes GET-requests
@@ -28,7 +32,7 @@ public class GetUserServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
 
         try {
-            User user = readUser.getUser(id);
+            User user = userService.getUser(id);
             req.setAttribute("user", user);
             req.getRequestDispatcher("/WEB-INF/user_info.jsp").forward(req, resp);
 

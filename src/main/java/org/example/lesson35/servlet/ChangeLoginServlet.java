@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.lesson35.crud.UpdateUser;
+import org.example.lesson35.service.UserService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -16,7 +16,11 @@ import java.sql.SQLException;
  */
 @WebServlet("/change-login")
 public class ChangeLoginServlet extends HttpServlet {
-    private final UpdateUser updateUser = new UpdateUser();
+    private final UserService userService;
+
+    public ChangeLoginServlet() {
+        userService = new UserService();
+    }
 
     /**
      * Processes GET-requests
@@ -37,7 +41,9 @@ public class ChangeLoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String newLogin = req.getParameter("login");
 
-        if (idAsLine == null || idAsLine.isEmpty() || email == null || email.isEmpty() || newLogin == null || newLogin.isEmpty()) {
+        if (idAsLine == null || idAsLine.isEmpty()
+                || email == null || email.isEmpty()
+                || newLogin == null || newLogin.isEmpty()) {
             resp.sendRedirect(req.getContextPath() + "/change-login");
         }
 
@@ -45,7 +51,7 @@ public class ChangeLoginServlet extends HttpServlet {
             if (idAsLine != null) {
                 int id = Integer.parseInt(idAsLine);
 
-                updateUser.updateUser(id, email, newLogin);
+                userService.updateUser(id, email, newLogin);
                 resp.sendRedirect(req.getContextPath() + "/get?id=" + id + "&login=" + newLogin);
             }
 
