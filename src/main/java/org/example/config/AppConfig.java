@@ -16,7 +16,6 @@ public class AppConfig {
 
     /**
      * Creates a list of tasks with subtasks.
-     *
      * @return a list of tasks, each of which can contain subtasks
      */
     @Bean

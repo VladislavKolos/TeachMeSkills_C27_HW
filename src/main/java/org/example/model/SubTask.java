@@ -6,6 +6,4 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 public class SubTask extends AbstractTask {
-
-
 }
