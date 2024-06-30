@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/delete" method="post">
+<form action="${pageContext.request.contextPath}/user/delete" method="post">
     <label for="id">User ID:</label>
     <input type="text" id="id" name="id" value="${id}" required><br><br>
     <button type="submit">Delete User</button>

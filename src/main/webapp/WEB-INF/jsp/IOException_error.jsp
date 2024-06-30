@@ -6,11 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!-- error_io.jsp -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>IO Exception</title>
 </head>
 <body>
-
+<h1>IO Exception Occurred</h1>
+<p>There was an input/output error. Please try again later.</p>
 </body>
 </html>

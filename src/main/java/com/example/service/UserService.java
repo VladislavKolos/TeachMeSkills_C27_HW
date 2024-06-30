@@ -1,7 +1,7 @@
-package org.example.service;
+package com.example.service;
 
-import org.example.model.User;
-import org.example.util.PostgresUtil;
+import com.example.model.User;
+import com.example.util.PostgresUtil;
 import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
@@ -9,8 +9,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Service for working with users
+ * Provides methods for creating, getting, updating, and deleting users in a database.
+ */
 @Service
 public class UserService {
+
+    /**
+     * Creates a new user in the database.
+     *
+     * @param user user to add
+     * @throws SQLException if an error occurs while working with the database
+     */
     public void createUser(User user) throws SQLException {
         PostgresUtil postgresUtil = PostgresUtil.getInstance();
         Connection connection = PostgresUtil.getConnection();
@@ -43,6 +54,12 @@ public class UserService {
         }
     }
 
+    /**
+     * Gets user from database.
+     * @param id user ID
+     * @return the user found or null if the user is not found
+     * @throws SQLException if an error occurs while working with the database
+     */
     public User getUser(int id) throws SQLException {
         PostgresUtil postgresUtil = PostgresUtil.getInstance();
         Connection connection = PostgresUtil.getConnection();
@@ -87,6 +104,13 @@ public class UserService {
         return user;
     }
 
+    /**
+     * Changes the user login in the database.
+     * @param id user ID
+     * @param email user's email
+     * @param newLogin new user login
+     * @throws SQLException if an error occurs while working with the database
+     */
     public void updateUser(int id, String email, String newLogin) throws SQLException {
         PostgresUtil postgresUtil = PostgresUtil.getInstance();
         Connection connection = PostgresUtil.getConnection();
@@ -119,6 +143,11 @@ public class UserService {
         }
     }
 
+    /**
+     * Removes a user from the database by ID.
+     * @param id user ID
+     * @throws SQLException if an error occurs while working with the database
+     */
     public void deleteUser(int id) throws SQLException {
         PostgresUtil postgresUtil = PostgresUtil.getInstance();
         Connection connection = PostgresUtil.getConnection();

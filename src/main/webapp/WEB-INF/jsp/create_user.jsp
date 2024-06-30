@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form action="${pageContext.request.contextPath}/create" method="post">
+<form action="${pageContext.request.contextPath}/user/create" method="post">
     <label for="id">User ID:</label>
     <input type="text" id="id" name="id" value="${id}" required><br><br>
     <label for="email">Email:</label>
