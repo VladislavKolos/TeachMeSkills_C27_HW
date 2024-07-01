@@ -16,9 +16,9 @@ import java.sql.SQLException;
 /**
  * Controller for user management.
  */
+@Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
-@Controller
 public class UserController {
     private final UserService userService;
 

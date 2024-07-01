@@ -1,13 +1,13 @@
 package com.example.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @SuperBuilder
 public class User {
     private int id;
